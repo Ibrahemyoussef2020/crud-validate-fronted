@@ -40,6 +40,7 @@
 }
 .User button{
     border-radius: 15px;
+    margin: 5px auto !important;
 }
 /* media query */
 @media screen and (max-width: 475px) {

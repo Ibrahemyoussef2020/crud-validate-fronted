@@ -5,20 +5,20 @@ import User from './User'
 import {ToastifyContainer,toastify} from '../../notifications'
 
 const Users = ({setRoutation,setValues}) => {
-    const {data:users,isLoading,isError} = useQuery('users',getUsers)
+    const {data:users,isError,isLoading} = useQuery('users',getUsers)
+   
 
     if(isLoading){
-      toastify('loading your data', 'ather')
-      return <ToastifyContainer/>
+      return toastify('ather','Wait data is Loading')
     }
-    
+
     if(isError){
-      toastify('Error:failed loading data', 'error')
-      return <ToastifyContainer/>
+      return toastify('error','Error:failed loading data')
     }
  
     return (
-      users?.map(({id,name,email,password})=> <React.Fragment key={id}>
+      <>
+      {users?.map(({id,name,email,password})=> <React.Fragment key={id}>
       <User Id={id}
         name={name}
         email={email}
@@ -26,7 +26,9 @@ const Users = ({setRoutation,setValues}) => {
         setRoutation={setRoutation}
         setValues={setValues}
       />
-    </React.Fragment>)
+    </React.Fragment>)}
+    <ToastifyContainer/>
+    </>
   )
 }
 

@@ -1,3 +1,4 @@
+import React from 'react'
 import {useMutation, useQueryClient} from 'react-query'
 //import {ThreeDots} from 'react-loaders-spinners'
 import {
@@ -15,7 +16,6 @@ const User = ({Id,name,email,password,setRoutation,setValues}) => {
     // remove Email
     const {mutateAsync:mutateDelete} = useMutation(removeUser)
     const handleRemove = async (id)=>{
-        console.log('id :' , id);
        await mutateDelete(id)
        queryClient.invalidateQueries('users')
     }

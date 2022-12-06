@@ -15,12 +15,11 @@ Form
     
 import * as Yup from 'yup'
 
-import {useQuery,useMutation, useQueryClient} from 'react-query'
+import {useMutation, useQueryClient} from 'react-query'
 
 import * as f from '.././formikUtilities/FormikTypes'
 import Control from '../formikUtilities/FormikControl'
 import {SpicialCar} from '../formikUtilities/Character'
-import { Margin } from '@mui/icons-material'
 
 import '.././formik.css'
 import { addUser, modifyUser } from '../../apis'
@@ -30,8 +29,7 @@ import { addUser, modifyUser } from '../../apis'
 const validateName = (values)=>{
     let errors = ''
     const Space = values.split('').filter(v =>/\s/.test(v))
-    if(Space.length < 1) errors += ' | you must type your last name | '
-    console.log(Space);
+    if(Space.length < 1) errors += 'you must type your last name'
     return errors
 }
 
@@ -42,13 +40,13 @@ const validatePass = (values)=>{
    const Lowervalue = values.split('').filter(v => /[a-z]/.test(v))
    const NumbValue  = values.split('').filter(v => /[0-9]/.test(v))
    const Spicieal    = values.split('').filter(v => SpicialCar.split('').find(s => s === v))
-   if(NumbValue < 2) errors +=  ' | we wont 2 number | '
+   if(NumbValue < 2) errors +=  '2 number, '
    
-   if(Uppervalue.length < 2) errors += ' | we wont 2 upper | '
+   if(Uppervalue.length < 2) errors += '2 upper, '
    
-   if(Lowervalue.length < 2) errors += ' | we wont 2 lower | '
+   if(Lowervalue.length < 2) errors += '2 lower ,'
    
-   if(Spicieal.length < 2) errors += ' | we wont 2 character | '
+   if(Spicieal.length < 2) errors += '2 character, '
    
     return errors
 }
@@ -136,7 +134,6 @@ const initialValues = {
             >
             {formik =>(        
                 <Form className='form'>
-                    {console.log(formik)}
                     <Control
                         control={f.TEXTFIELD}
                         type='text' 

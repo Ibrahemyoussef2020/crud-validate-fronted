@@ -13,7 +13,7 @@ import {toastify,ToastifyContainer} from '../../notifications';
 import * as g from '../formikUtilities/Character'
 
 
-import {TEXTFIELD,CHEKBOX,CHECK_GENE,INPUT_GENE} from  '../formikUtilities/FormikTypes';
+import {CHECK_GENE,INPUT_GENE} from  '../formikUtilities/FormikTypes';
 import FileCopyIcon from '@mui/icons-material/FileCopy';
 import FilterNoneIcon from '@mui/icons-material/FilterNone';
 import {hasAnoneChildBorder} from '../../components/classes/classes'

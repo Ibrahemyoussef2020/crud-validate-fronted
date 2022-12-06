@@ -7,6 +7,7 @@
       0px 1px 3px 0px rgb(0 0 0 / 50%);
 }
 .TextField-container{
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -29,6 +30,18 @@
 .screen-container .MuiFormControl-root{
     flex: 1;
     margin-top: 10px;
+}
+.error-text{
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    max-width: 221px;
+    margin-left: 1.3rem;
+
+    background: #000;
+    z-index: 3;
+    color:yellow;
 }
 
 /* media query */

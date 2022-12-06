@@ -2,6 +2,10 @@ import { Field,ErrorMessage} from 'formik'
 import {TextField,Box} from '@mui/material'
 import Br from '../../../components/componentUtilities/Br'
 
+const ErrorText = ({children})=>{
+  return <div className='error-text'>{children}</div>
+}
+
 const UseTextField = (props) => {
     const {name,label,validate,onChange,...rest} = props
   return (
@@ -16,8 +20,8 @@ const UseTextField = (props) => {
             sx={{ textAlgin:'center' }} 
         />
         <ErrorMessage name={name} 
-        component='div' 
-        className='error-color' />
+        component={ErrorText} 
+        />
     </Box>
     <Br h='15px'/>
     </>
