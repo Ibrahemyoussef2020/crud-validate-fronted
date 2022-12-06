@@ -1,0 +1,43 @@
+
+/* Validator */
+
+.css-1xsdj5v-MuiPaper-root-MuiCard-root{
+    box-shadow: 0px 0px 0px 0px rgb(0 0 0 / 50%),
+     0px 0px 1px 0px rgb(0 0 0 / 50%),
+      0px 1px 3px 0px rgb(0 0 0 / 50%);
+}
+.TextField-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.submit-container{
+    text-align: center;
+}
+
+/* Generator */
+
+.CardGenetrater{
+    margin: 2rem auto;
+}
+.screen-container  {
+    display: flex;
+    justify-content: center;
+}
+.screen-container .MuiFormControl-root{
+    flex: 1;
+    margin-top: 10px;
+}
+
+/* media query */
+
+
+@media only screen and (max-width: 320px) {
+    /* validator */
+    .css-13xfq8m-MuiTabPanel-root{
+        padding: 0 !important;
+    }
+  }
+    

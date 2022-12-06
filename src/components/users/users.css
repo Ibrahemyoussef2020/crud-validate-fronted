@@ -1,0 +1,66 @@
+.User{
+    max-width: 550px;
+    margin: 10px;
+    border: 1px solid #1976d2;   
+    border-radius: 15px;
+}
+.User .css-13xfq8m-MuiTabPanel-root{
+    padding: 0;
+}
+.User .userItem{
+    align-items: center;
+    padding: 7px 0  7px 15px ;
+    border-bottom: .5px dashed #1976d282;
+}
+.User .userProfile{
+    background: #1976d2;
+    border-radius: 15px;
+    border-top: 5px solid #000;
+}
+.User .userItem:first-child,
+.User .userItem:last-child,
+.User .userItem:nth-child(4)
+{
+    border-bottom: none;
+}
+.User .userItem .text {
+    color: red;
+    font-weight: 900;
+    font-style:oblique;
+    padding-right: 5px;
+    word-wrap: normal;
+}
+.User .userItem .text.name{
+    color: #fff;
+} 
+.User .userItem .var{
+    color:#080;
+    font-weight: 400px;
+    word-break: break-all;
+}
+.User button{
+    border-radius: 15px;
+}
+/* media query */
+@media screen and (max-width: 475px) {
+    .User .userItem{
+        flex-direction: column;
+        justify-content: center;
+        padding: 7px 0;
+    }
+    .User .userItem *{
+        text-align: center;
+    }
+    .User .btnsItem {
+        padding: 7px 5px;
+    }
+    .User button{
+        width: 100%;
+        flex: 1;
+    }
+    .User .var{
+        margin-left: 0;
+    }
+  }
+
+ 

@@ -1,0 +1,11 @@
+.Nav-container .tab-list .MuiTabs-flexContainer{
+    flex-wrap: wrap;
+}
+.Nav-container .tab-list-container > *{
+    width: 100%;
+}
+.Nav-container .tab-list .MuiTabs-flexContainer{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
